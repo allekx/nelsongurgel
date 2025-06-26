@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blindagem Profissional</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="site-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar collapsed" id="sidebar">
+      <button class="menu-toggle" id="menuToggle">
+        &#9776;
+      </button>
+      <nav>
+        <ul>
+          <li><a href="./index.html"><img src="./img/icon home.png" alt="Icon HOME"><span class="text">HOME</span></a></li>
+          <li><a href="#"><img src="./img/icon cirurgia segurea.png" alt="Icon CIRURGIA SEGURA"><span class="text">CIRURGIA SEGURA</span></a></li>
+          <li><a href="#"><img src="./img/icon responsabilidade civil.png" alt="Icon RESPONSABILIDADE CIVIL"><span class="text">RESPONSABILIDADE CIVIL</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div style="flex: 1; display: flex; flex-direction: column;">
+      <!-- Header -->
+      <header>
+        <div class="logo">
+          <img src="./img/logo.png" alt="Logo NG">
+        </div>
+        <div class="header-buttons">
+          <button class="btn-contato"><img src="./img/icon whatsapp.png" alt="icon whatsapp">CONTATO</button>
+          <button class="btn-email"><img src="./img/icon e-amail.png" alt="icon e-amail"> E-MAIL</button>
+        </div>
+      </header>
+
+      <!-- Conteúdo Principal -->
+      <main>
+        <section class="bloco-destaque">
+          <div class="texto-destaque">
+            <h1>Por que adquirir uma Blindagem Profissional?</h1>
+            <p>Atualmente, em média 4 Médicos são processados por hora no Brasil. Diante da crescente judicialização na área da saúde, os profissionais ficam cada vez mais vulneráveis.</p>
+            <p><strong>Uma Blindagem Profissional irá oferecer amparo financeiro e jurídico diante de imprevistos, dando assim mais tranquilidade no exercício profissional.</strong></p>
+            <button class="btn-cotacao">Solicitar Cotação</button>
+          </div>
+          <div class="imagem-destaque">
+            <img src="./img/banner1.png" alt="Imagem médico destaque">
+          </div>
+        </section>
+
+        <section class="bloco-informativo">
+          <div class="imagem">
+            <img src="./img/img1.png" alt="Imagem blindagem">
+          </div>
+          <div class="texto">
+            <h2>Conheça os diferenciais da <span class="azul">Blindagem Profissional:</span></h2>
+            <ul>
+              <li>Assistência jurídica especializada em Direito Médico e Odontológico, nas áreas Criminal, Cível, Administrativa e Ética</li>
+              <li>Plantão permanente para esclarecimento de dúvidas</li>
+              <li>Manuais científicos</li>
+              <li>Capital Segurado de até R$ 500 mil</li>
+              <li>Antecipacão de Tutela</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="bloco-cirurgia">
+          <div class="texto">
+            <h2>Conheça o <span class="azul">Cirurgia Segura</span></h2>
+            <p>O Cirurgia Segura promove Segurança a todos os envolvidos no ato cirúrgico, garantindo liquidez financeira da fatura (conta extra), tranquilizando a instituição hospitalar diante de questionamentos e corresponsabilidades por intercorrência cirúrgica.</p>
+          </div>
+          <div class="imagem">
+            <img src="./img/img2.png" alt="Imagem cirurgia">
+          </div>
+        </section>
+      </main>
+
+      <!-- Rodapé -->
+      <footer>
+        <div class="footer-logo">
+          <img src="./img/logo2.png" alt="Logo NG Rodapé">
+        </div>
+        <div class="footer-info">
+          <p><strong>NELSON GURGEL</strong><br>Representante Anadem Manaus</p>
+          <p><strong>CONTATO:</strong><br>(92) 99120-3536 (WhatsApp)<br>(92) 98291-0122<br>contato@nelsongurgel.com</p>
+
+        </div>
+        <div class="footer-social">
+          <img src="./img/icon facebook.png" alt="Facebook">
+          <img src="./img/icon instagram.png" alt="Instagram">
+                    <p><strong>Rua Abelardo Barbosa nº20<br> Aleixo - Manaus - Amazonas</strong></p>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.getElementById('sidebar');
+
+    menuToggle.addEventListener('click', () => {
+      sidebar.classList.toggle('expanded');
+    });
+  </script>
+</body>
+</html>
