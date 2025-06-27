@@ -28,7 +28,7 @@
       position: fixed;
       top: 0;
       left: 0;
-      height: 100vh;
+      height: 100%;
       z-index: 1000;
       padding-top: 1rem;
     }
@@ -135,64 +135,89 @@
       margin-left: 200px;
     }
 
-    .bloco-destaque {
-      display: flex;
-      flex-wrap: wrap;
-      background: white;
-      border-radius: 10px;
-      overflow: hidden;
-      margin-bottom: 2rem;
-    }
+.bloco-destaque {
+  position: relative;
+  background-image: url('./img/banner1.png');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  text-align: left;
+  overflow: hidden;
+  min-height: 800px;
+  margin-bottom: 1rem;
+}
 
-    .texto-destaque {
-      flex: 1 1 400px;
-      padding: 2rem;
-    }
+.bloco-destaque .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+  z-index: 1;
+}
 
-    .texto-destaque h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
+.texto-destaque {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
 
-    .texto-destaque p {
-      margin-bottom: 1rem;
-      line-height: 1.5;
-    }
+.texto-destaque h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
 
-    .btn-cotacao {
-      background-color: #2eaa93;
-      color: white;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.texto-destaque p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
 
-    .imagem-destaque img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+.btn-cotacao {
+  background-color: #2eaa93;
+  margin-top: 3rem;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
 
     .bloco-informativo,
     .bloco-cirurgia {
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
       background: white;
       border-radius: 10px;
       overflow: hidden;
-      margin-bottom: 2rem;
+      margin-bottom: 0rem;
     }
 
     .bloco-informativo .imagem,
     .bloco-cirurgia .imagem {
       flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
     }
 
     .bloco-informativo .texto,
     .bloco-cirurgia .texto {
-      flex: 1 1 400px;
+      flex: 1 1 200px;
       padding: 2rem;
+    }
+    .bloco-cirurgia .texto{
+      margin-left: 9rem;
     }
 
     .bloco-informativo h2,
@@ -247,6 +272,24 @@
     }
 
     /* Responsivo */
+
+    @media (max-width: 1024px) {
+   .bloco-destaque {
+    padding: 3rem 2rem;
+    min-height: 600px; /* reduz a altura */
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texto-destaque h1 {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+
+
+
     @media (max-width: 768px) {
       header {
         flex-direction: column;
@@ -257,6 +300,7 @@
 
       .header-buttons {
         margin-top: 1rem;
+        margin-left: -1rem;
       }
 
       main {
@@ -272,9 +316,60 @@
       .bloco-cirurgia {
         flex-direction: column;
       }
+ .bloco-destaque {
+    padding: 2rem 1rem;
+    min-height: 500px; /* mais compacto */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+  .texto-destaque {
+    max-width: 100%;
+  }
+
+  .texto-destaque h1 {
+    font-size: 1.8rem;
+  }
+
+  .texto-destaque p {
+    font-size: 0.95rem;
+  }
+  .bloco-cirurgia{
+    flex-direction: column-reverse;
+  }
+      .bloco-cirurgia .texto{
+      margin-left: 0rem;
     }
+}
+
+@media (max-width: 480px) {
+  .bloco-destaque {
+    padding: 2rem 1rem;
+    min-height: 450px; /* ainda menor */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .texto-destaque h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .texto-destaque p {
+    font-size: 0.9rem;
+  }
+
+  .btn-cotacao {
+    font-size: 0.9rem;
+    padding: 0.6rem 1.2rem;
+  }
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
