@@ -271,105 +271,193 @@
       margin-top: 2rem;
     }
 
-    /* Responsivo */
+/* Responsivo */
 
-    @media (max-width: 1024px) {
-   .bloco-destaque {
-    padding: 3rem 2rem;
-    min-height: 600px; /* reduz a altura */
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .bloco-destaque {
+    padding: 3rem 1.5rem;
+    min-height: 600px;
     align-items: center;
     justify-content: center;
   }
 
   .texto-destaque h1 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 2rem;
+  }
+
+  .texto-destaque p {
+    font-size: 1rem;
+  }
+
+  .btn-cotacao {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .bloco-informativo .texto,
+  .bloco-cirurgia .texto {
+    padding: 1.5rem;
+  }
+
+  .footer-logo img {
+    width: 300px;
+    height: auto;
   }
 }
 
 
+/* Celulares médios e grandes */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
 
+  .header-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
 
-    @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-        height: auto;
-        padding: 1rem;
-      }
+  .header-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
 
-      .header-buttons {
-        margin-top: 1rem;
-        margin-left: -1rem;
-      }
+  main {
+    margin-left: 60px;
+    padding: 1rem;
+  }
 
-      main {
-        margin-left: 60px;
-      }
+ 
+  .sidebar.expanded ~ main {
+    margin-left: 200px;
+  }
 
-      .sidebar.expanded ~ main {
-        margin-left: 200px;
-      }
-
-      .bloco-destaque,
-      .bloco-informativo,
-      .bloco-cirurgia {
-        flex-direction: column;
-      }
- .bloco-destaque {
+  .bloco-destaque {
+    background-image: url('./img/banner1-mobile.png');
+    width: 85%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    margin-top: 6rem;
+    min-height: 500px;
     padding: 2rem 1rem;
-    min-height: 500px; /* mais compacto */
+    text-align: center;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    margin-top: 2rem;
   }
 
   .texto-destaque {
     max-width: 100%;
-  }
-
-  .texto-destaque h1 {
-    font-size: 1.8rem;
-  }
-
-  .texto-destaque p {
-    font-size: 0.95rem;
-  }
-  .bloco-cirurgia{
-    flex-direction: column-reverse;
-  }
-      .bloco-cirurgia .texto{
-      margin-left: 0rem;
-    }
-}
-
-@media (max-width: 480px) {
-  .bloco-destaque {
-    padding: 2rem 1rem;
-    min-height: 450px; /* ainda menor */
-    align-items: center;
-    justify-content: center;
     text-align: center;
   }
 
   .texto-destaque h1 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
   }
 
   .texto-destaque p {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .btn-cotacao {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding: 0.6rem 1.2rem;
+    margin-top: 1.5rem;
   }
+
+  .bloco-informativo,
+  .bloco-cirurgia {
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .bloco-cirurgia {
+    flex-direction: column-reverse;
+  }
+
+  .bloco-cirurgia .texto {
+    margin-left: 0;
+  }
+
+  .bloco-informativo .imagem img,
+  .bloco-cirurgia .imagem img {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .bloco-informativo .texto,
+  .bloco-cirurgia .texto {
+    padding: 1rem;
+    text-align: start;
+  }
+
+  .bloco-informativo h2,
+  .bloco-cirurgia h2 {
+    font-size: 1rem;
+  }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  .bloco-destaque {
+    min-height: 400px;
+    padding: 1.5rem 1rem;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .texto-destaque h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .texto-destaque p {
+    font-size: 0.8rem;
+  }
+
+  .btn-cotacao {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .header-buttons button {
+    font-size: 0.8rem;
+  }
+
   footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer-logo img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+  }
+
+  .footer-social img {
+    width: 25px;
+  }
+
+  .footer-info p,
+  .footer-social p {
+    font-size: 0.8rem;
   }
 }
