@@ -1,7 +1,6 @@
 /* Reset */
     * {
       margin: 0;
-      padding: 0;
       box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
@@ -128,7 +127,6 @@
       margin-top: 100px;
       margin-left: 60px;
       padding: 2rem;
-      width: 100%;
     }
 
     .sidebar.expanded ~ main {
@@ -241,7 +239,7 @@
     /* Footer */
     footer {
       background-color: #2a3faa;
-      width: 100.8%;
+      width: 100%;
       color: white;
       display: flex;
       flex-wrap: wrap;
@@ -310,6 +308,9 @@
 
 /* Celulares médios e grandes */
 @media (max-width: 768px) {
+   html, body {
+    width: 100%;
+   }
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -332,7 +333,8 @@
 
   main {
     margin-left: 60px;
-    padding: 1rem;
+    padding: 0rem;
+    margin-top: 5.9rem;
   }
 
  
@@ -342,10 +344,11 @@
 
   .bloco-destaque {
     background-image: url('./img/banner1-mobile.png');
-    width: 85%;
+    width: 100%;
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
+    border-radius: 0;
     margin-top: 6rem;
     min-height: 500px;
     padding: 2rem 1rem;
@@ -378,7 +381,7 @@
   .bloco-informativo,
   .bloco-cirurgia {
     flex-direction: column;
-    width: 85%;
+    width: 100%;
   }
 
   .bloco-cirurgia {
@@ -391,15 +394,16 @@
 
   .bloco-informativo .imagem img,
   .bloco-cirurgia .imagem img {
-    width: 90%;
-    max-width: 400px;
-    height: auto;
+    max-width: 90%;
+    height: 80%;
   }
 
   .bloco-informativo .texto,
   .bloco-cirurgia .texto {
     padding: 1rem;
     text-align: start;
+    font-size: 0.85rem;
+    line-height: 1.4;
   }
 
   .bloco-informativo h2,
@@ -411,6 +415,9 @@
 
 /* Celulares pequenos */
 @media (max-width: 480px) {
+  header {
+    width: 100%;
+  }
   .bloco-destaque {
     min-height: 400px;
     padding: 1.5rem 1rem;
@@ -450,14 +457,17 @@
     width: 80%;
     max-width: 250px;
     height: auto;
+    margin-left: 4rem;
   }
 
   .footer-social img {
     width: 25px;
+    margin-left: 4rem;
   }
 
   .footer-info p,
   .footer-social p {
+    margin-left: 4rem;
     font-size: 0.8rem;
   }
 }
