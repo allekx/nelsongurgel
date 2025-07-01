@@ -126,7 +126,8 @@
     main {
       margin-top: 100px;
       margin-left: 60px;
-      padding: 2rem;
+      padding: 1rem;
+      width: 100%;
     }
 
     .sidebar.expanded ~ main {
@@ -335,6 +336,7 @@
     margin-left: 60px;
     padding: 0rem;
     margin-top: 5.9rem;
+    width: 83%;
   }
 
  
