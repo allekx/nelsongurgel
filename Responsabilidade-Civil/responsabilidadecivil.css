@@ -1,0 +1,475 @@
+/* Reset */
+    * {
+      margin: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    html, body {
+      height: 100%;
+      width: 98%;
+      background-color: #e0e0e0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #site-wrapper {
+      display: flex;
+      flex: 1;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 60px;
+      background-color: #2eaa93;
+      color: white;
+      transition: width 0.3s ease;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 1000;
+      padding-top: 1rem;
+    }
+
+    .sidebar nav ul {
+      list-style: none;
+      margin-top: 4rem;
+    }
+
+    .sidebar nav ul li a {
+      display: flex;
+      align-items: center;
+      margin-left: -5px;
+      margin-top: 2rem;
+      padding: 0px;
+    }
+
+    .sidebar nav ul li a .text {
+      display: none;
+    }
+
+    .sidebar.expanded {
+      width: 200px;
+
+    }
+
+    .sidebar.expanded .text {
+      display: inline;
+      font-size: 12px;
+      padding: 2px;
+      color: bisque;
+      text-decoration: underline;
+    }
+
+    .menu-toggle {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.5rem;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    /* Header */
+    header {
+      background-color: #2a3faa;
+      height: 80px;
+      width: 97%;
+      margin-left: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      position: fixed;
+      top: 0;
+      z-index: 999;
+    }
+
+    .sidebar.expanded ~ header {
+      margin-left: 200px;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.header-buttons button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 150px;
+  border: none;
+  background: #4480B9;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.header-buttons button img {
+  width: 20px;
+  height: 20px;
+}
+.header-buttons button:hover {
+  border: 1px solid #000000;
+}
+    /* Main */
+    main {
+      margin-top: 100px;
+      margin-left: 60px;
+      padding: 1rem;
+      width: 100%;
+    }
+
+    .sidebar.expanded ~ main {
+      margin-left: 200px;
+    }
+
+.bloco-destaque {
+  position: relative;
+  background-image: url('../img/banner\ medicos.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  text-align: left;
+  overflow: hidden;
+  min-height: 800px;
+  margin-bottom: 1rem;
+}
+
+.bloco-destaque .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+  z-index: 1;
+}
+
+.texto-destaque {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.texto-destaque h1 {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+
+.texto-destaque p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.btn-cotacao {
+  background-color: #2eaa93;
+  margin-top: 3rem;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+    .bloco-informativo,
+    .bloco-cirurgia {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 0rem;
+    }
+
+    .bloco-informativo .imagem,
+    .bloco-cirurgia .imagem {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    .bloco-informativo .texto,
+    .bloco-cirurgia .texto {
+      flex: 1 1 200px;
+      padding: 2rem;
+    }
+    .bloco-cirurgia .texto{
+      margin-left: 9rem;
+    }
+
+    .bloco-informativo h2,
+    .bloco-cirurgia h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .azul {
+      color: #2a3faa;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #2a3faa;
+      width: 100%;
+      color: white;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 2rem;
+      margin-left: 60px;
+    }
+
+    .sidebar.expanded ~ footer {
+      margin-left: 200px;
+    }
+
+    .footer-logo img {
+      width: 380px;
+      height: 140px;
+    }
+
+    .footer-info p, .footer-social p {
+      margin-bottom: 1rem;
+    }
+
+    .footer-social img {
+      width: 30px;
+      margin-right: 10px;
+    }
+    .footer-social p {
+      margin-top: 2rem;
+    }
+
+/* Responsivo */
+
+/* Tablets e notebooks pequenos */
+@media (max-width: 1024px) {
+  .bloco-destaque {
+    padding: 3rem 1.5rem;
+    min-height: 600px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texto-destaque h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .texto-destaque p {
+    font-size: 1rem;
+  }
+
+  .btn-cotacao {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .bloco-informativo .texto,
+  .bloco-cirurgia .texto {
+    padding: 1.5rem;
+  }
+
+  .footer-logo img {
+    width: 300px;
+    height: auto;
+  }
+}
+
+
+/* Celulares médios e grandes */
+@media (max-width: 768px) {
+   html, body {
+    width: 100%;
+   }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .header-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+
+  .header-buttons button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  main {
+    margin-left: 60px;
+    padding: 0rem;
+    margin-top: 5.9rem;
+    width: 83%;
+  }
+
+ 
+  .sidebar.expanded ~ main {
+    margin-left: 200px;
+  }
+
+  .bloco-destaque {
+    background-image: url('../img/banner\ medicos.jpg');
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    margin-top: 6rem;
+    min-height: 500px;
+    padding: 2rem 1rem;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .texto-destaque {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .texto-destaque h1 {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .texto-destaque p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .btn-cotacao {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .bloco-informativo,
+  .bloco-cirurgia {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .bloco-cirurgia {
+    flex-direction: column-reverse;
+  }
+
+  .bloco-cirurgia .texto {
+    margin-left: 0;
+  }
+
+  .bloco-informativo .imagem img,
+  .bloco-cirurgia .imagem img {
+    max-width: 90%;
+    height: 80%;
+  }
+
+  .bloco-informativo .texto,
+  .bloco-cirurgia .texto {
+    padding: 1rem;
+    text-align: start;
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  .bloco-informativo h2,
+  .bloco-cirurgia h2 {
+    font-size: 1rem;
+  }
+}
+
+
+/* Celulares pequenos */
+@media (max-width: 480px) {
+  header {
+    width: 100%;
+  }
+  .bloco-destaque {
+    min-height: 400px;
+    padding: 1.5rem 1rem;
+    background-size: cover;
+    background-position: center top;
+  }
+
+  .texto-destaque h1 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .texto-destaque p {
+    font-size: 0.8rem;
+  }
+
+  .btn-cotacao {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .header-buttons button {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .footer-logo img {
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    margin-left: 4rem;
+  }
+
+  .footer-social img {
+    width: 25px;
+    margin-left: 4rem;
+  }
+
+  .footer-info p,
+  .footer-social p {
+    margin-left: 4rem;
+    font-size: 0.8rem;
+  }
+}
