@@ -48,7 +48,10 @@
     .sidebar nav ul li a .text {
       display: none;
     }
-
+    .sidebar nav ul li a img {
+      width: 30px;
+      height: 30px;
+    }
     .sidebar.expanded {
       width: 200px;
 
@@ -73,7 +76,7 @@
 
     /* Header */
     header {
-      background-color: #2a3faa;
+      background-color: #f7f5f5;
       height: 80px;
       width: 97%;
       margin-left: 60px;
@@ -91,7 +94,7 @@
     }
 
     .logo img {
-      height: 50px;
+      height: 40px;
       width: auto;
     }
 
@@ -106,8 +109,8 @@
   gap: 8px;
   width: 150px;
   border: none;
-  background: #4480B9;
-  color: #000000;
+   background-color: #2eaa93;
+  color: #fff;
   padding: 0.5rem 1rem;
   margin-left: 1rem;
   border-radius: 5px;
@@ -149,6 +152,7 @@
   overflow: hidden;
   min-height: 800px;
   margin-bottom: 1rem;
+  margin-top: -1.9rem;
 }
 
 .bloco-destaque .overlay {
@@ -186,8 +190,11 @@
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  transition: 0.3s;
 }
-
+.btn-cotacao:hover {
+  scale: 1.1;
+}
 
     .bloco-informativo,
     .bloco-cirurgia {
@@ -208,6 +215,12 @@
       display: flex;
       justify-content: center;
       margin-top: 2rem;
+    }
+        .bloco-informativo .imagem img,
+    .bloco-cirurgia .imagem img {
+      box-shadow: 8px 8px 15px rgba(0,0,0,0.15), -8px -8px 15px rgba(255,255,255,0.6);
+      border-radius: 14px;
+
     }
 
     .bloco-informativo .texto,
@@ -312,12 +325,22 @@
    html, body {
     width: 100%;
    }
+
   header {
     flex-direction: column;
     align-items: flex-start;
     height: auto;
     padding: 1rem;
     gap: 1rem;
+  }
+    .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  .logo img {
+    width: 190px;
+    height: auto;
   }
 
   .header-buttons {
@@ -345,13 +368,13 @@
   }
 
   .bloco-destaque {
-    background-image: url('../img/banner\ medicos.jpg');
-    width: 100%;
+    background-image: url('../img/banner\ medicos-mobile.png');
+    width: 101%;
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     border-radius: 0;
-    margin-top: 6rem;
+    margin-top: 8rem;
     min-height: 500px;
     padding: 2rem 1rem;
     text-align: center;
@@ -453,6 +476,7 @@
     padding: 1rem;
     text-align: center;
     margin-left: 0;
+    width: 103%;
   }
 
   .footer-logo img {
