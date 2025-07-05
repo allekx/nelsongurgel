@@ -21,7 +21,7 @@
     /* Sidebar */
     .sidebar {
       width: 60px;
-      background-color: #3ac7ad;
+      background-color: #2eaa93;
       color: white;
       transition: width 0.3s ease;
       position: fixed;
@@ -110,7 +110,7 @@
   gap: 8px;
   width: 150px;
   border: none;
-   background-color: #43e4c6;
+   background-color: #2eaa93;
   color: #fff;
   padding: 0.5rem 1rem;
   margin-left: 1rem;
