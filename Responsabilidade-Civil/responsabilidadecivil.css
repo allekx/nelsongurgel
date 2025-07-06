@@ -102,6 +102,10 @@
   display: flex;
   align-items: center;
 }
+.header-buttons a {
+  text-decoration: none;
+  color: inherit;
+}
 
 .header-buttons button {
   display: flex;
@@ -252,7 +256,7 @@
 
     /* Footer */
     footer {
-      background-color: #2a3faa;
+      background-color: #000214fa;
       width: 100%;
       color: white;
       display: flex;
@@ -261,6 +265,18 @@
       padding: 2rem;
       margin-left: 60px;
     }
+        footer .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    footer .logo img {
+      height: 60px;
+      width: auto;
+    }
+
 
     .sidebar.expanded ~ footer {
       margin-left: 200px;
@@ -478,6 +494,18 @@
     margin-left: 0;
     width: 103%;
   }
+     footer .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+  }
+ footer .logo img {
+    width: 190px;
+    height: auto;
+    margin-left: 3rem;
+  }
+
 
   .footer-logo img {
     width: 80%;

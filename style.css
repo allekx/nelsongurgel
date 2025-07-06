@@ -21,7 +21,7 @@
     /* Sidebar */
     .sidebar {
       width: 60px;
-      background-color: #2eaa93;
+      background-color: #3ac7ad;
       color: white;
       transition: width 0.3s ease;
       position: fixed;
@@ -103,8 +103,12 @@
   display: flex;
   align-items: center;
 }
+.header-buttons a {
+  text-decoration: none;
+  color: inherit;
+}
 
-.header-buttons button {
+.header-buttons button  {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -197,6 +201,36 @@
   scale: 1.1;
 }
 
+ /* Seção de vídeo */
+    .video-section {
+      background-color: #155e5c;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .video-section h2 {
+      color: white;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      max-width: 800px;
+    }
+
+    .video-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      aspect-ratio: 16 / 9;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
     .bloco-informativo,
     .bloco-cirurgia {
@@ -235,6 +269,11 @@
     .bloco-cirurgia .texto{
       margin-left: 9rem;
     }
+    .bloco-cirurgia .texto h2 a {
+      text-decoration: none;
+      color: inherit;
+
+    }
 
     .bloco-informativo h2,
     .bloco-cirurgia h2 {
@@ -256,7 +295,7 @@
 
     /* Footer */
     footer {
-      background-color: #2a3faa;
+      background-color: #000214fa;
       width: 100%;
       color: white;
       display: flex;
@@ -264,6 +303,17 @@
       justify-content: space-evenly;
       padding: 2rem;
       margin-left: 60px;
+    }
+    footer .logo {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+    footer .logo img {
+      height: 60px;
+      width: auto;
     }
 
     .sidebar.expanded ~ footer {
@@ -481,6 +531,18 @@
     text-align: center;
     margin-left: 0;
   }
+   footer .logo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    width: 100%;
+  }
+ footer .logo img {
+    width: 190px;
+    height: auto;
+    margin-left: 3rem;
+  }
+
 
   .footer-logo img {
     width: 80%;
