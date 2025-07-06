@@ -52,6 +52,10 @@
     .sidebar nav ul li a img {
       width: 30px;
       height: 30px;
+      transition: 0.3s;
+    }
+    .sidebar nav ul li a img:hover {
+      scale: 1.1;
     }
     .sidebar.expanded {
       width: 200px;
