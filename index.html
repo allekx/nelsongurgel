@@ -44,9 +44,10 @@
     <h1>Por que adquirir uma Blindagem Profissional?</h1>
     <p>Atualmente, em média 4 Médicos são processados por hora no Brasil. Diante da crescente judicialização na área da saúde, os profissionais ficam cada vez mais vulneráveis.</p>
     <p style="color: #32D09E;"><strong>Uma Blindagem Profissional irá oferecer amparo financeiro e jurídico diante de imprevistos, dando assim mais tranquilidade no exercício profissional.</strong></p>
-    <a href="http://bit.ly/nelsongurgel"><button class="btn-cotacao">Solicitar Cotação</button></a>
+    <a href="#planos-section"><button class="btn-cotacao">Aderir Um Plano</button></a>
   </div>
 </section>
+
      <!-- Seção de Vídeo -->
         <section class="video-section">
           <h2>Assista o vídeo abaixo, e saiba como a ANADEM ajuda os profissionais da saúde:</h2>
@@ -54,6 +55,53 @@
             <iframe src="https://adesaoonlineanadem.com.br/wp-content/uploads/2022/05/video-anadem.mp4" allowfullscreen></iframe>
           </div>
         </section>
+
+<!-- Seção de planos -->
+<section class="planos-section" id="planos-section">
+  <h2>Planos de Adesão:</h2>
+
+  <!-- Cards de Planos -->
+  <div id="cards-container">
+    <div class="card">
+      <img src="./img/exemplo-planos.png" alt="Plano 1">
+      <button class="btn-aderir" data-plano="Plano 1">Aderir Plano 1</button>
+    </div>
+    <div class="card">
+      <img src="./img/exemplo-planos.png" alt="Plano 2">
+      <button class="btn-aderir" data-plano="Plano 2">Aderir Plano 2</button>
+    </div>
+    <div class="card">
+      <img src="./img/exemplo-planos.png" alt="Plano 3">
+      <button class="btn-aderir" data-plano="Plano 3">Aderir Plano 3</button>
+    </div>
+    <div class="card">
+      <img src="./img/exemplo-planos.png" alt="Plano 4">
+      <button class="btn-aderir" data-plano="Plano 4">Aderir Plano 4</button>
+    </div>
+  </div>
+
+  <!-- Formulário de Adesão -->
+  <div id="form-container" class="fade-out">
+    <div class="form-image">
+      <img src="./img/exemplo-planos.png" alt="Imagem do Plano">
+    </div>
+    <form id="formPlano">
+      <input type="text" name="nome" placeholder="Nome:" required>
+      <input type="email" name="email" placeholder="E-mail:" required>
+      <input type="text" name="cpf" placeholder="CPF:" required>
+      <button type="submit" class="btn-solicitar-plano">Solicitar Plano</button>
+      <button type="button" id="btnVoltar" class="btn-back">Voltar Para Os Planos</button>
+    </form>
+    <ul class="vantagens">
+      <li>------------------------------------------ - --------------, --- ----- --------, -----, -------------- - ------</li>
+      <li>--------- --------- ---- -------------- -- ---------</li>
+      <li>----------- ------------</li>
+      <li>------- --------- -- --- -- ---- ----</li>
+      <li>------------ -- ---------</li>
+    </ul>
+  </div>
+</section>
+
 
         <section class="bloco-informativo">
           <div class="imagem">
@@ -106,7 +154,7 @@
       </footer>
     </div>
   </div>
-
+<script src="./planos.js"></script>
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');
